@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>questions</title>
+    <script>
+      function find(){
+          var score=0;
+          if(document.getElementById("4").checked){
+              score+=1;
+          }
+          if(document.getElementById("5").checked){
+              score+=1;
+          }
+          if(document.getElementById("12").checked){
+              score+=1;
+          }
+          if(document.getElementById("13").checked){
+              score+=1;
+          }
+          alert("your score is:"+score)
+
+      }
+    </script>
+    </head>
+</html>
+<body>
+    <h1 align="center">online exam</h1>
+    <form>
+    <b>1:which of the following is a programing language</b><br><br>
+    <input type="radio" id="1" name="q1">
+    <label for="1">c</label><br>
+    <input type="radio" id="2" name="q1">
+    <label for="2">c++</label><br>
+    <input type="radio" id="3" name="q1">
+    <label for="3">java</label><br>
+    <input type="radio" id="4" name="q1">
+    <label for="4">All of the above</label>
+    <br><br>
+
+
+    <b>2:What is the smalles unit of information?</b><br><br>
+    <input type="radio" id="5" name="q2">
+    <label for="5">A bit</label><br>
+    <input type="radio" id="6" name="q2">
+    <label for="6">A byte</label><br>
+    <input type="radio" id="7" name="q2">
+    <label for="7">A block</label><br>
+    <input type="radio" id="8" name="q2">
+    <label for="8">A nible</label><br><br>
+
+
+    <b>3:which of the following is an output device</b><br><br>
+    <input type="radio" id="9" name="q3">
+    <label for="9">keyboard</label><br>
+    <input type="radio" id="10" name="q3">
+    <label for="10">mouse</label><br>
+    <input type="radio" id="11" name="q3">
+    <label for="11">light pen</label><br>
+    <input type="radio" id="12" name="q3">
+    <label for="12">VDU</label><br><br>
+
+    <b>q1:which of the following is extension of python</b><br><br>
+    <input type="radio" id="13" name="q4">
+    <label for="13">.py</label><br>
+    <input type="radio" id="14" name="q4">
+    <label for="14">.c</label><br>
+    <input type="radio" id="15" name="q4">
+    <label for="15">.html</label><br>
+    <input type="radio" id="16" name="q4">
+    <label for="16">.js</label><br>
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;<button onclick="find()">submit</button>
+    </form>
+</body>

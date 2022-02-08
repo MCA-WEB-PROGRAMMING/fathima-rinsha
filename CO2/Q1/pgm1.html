@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>string functions
+        </title>
+        <script>
+          function replace()
+            {
+                var s=document.getElementById('res3').value;
+                var s2=document.getElementById('old').value;
+                var s3=document.getElementById('new').value;
+                ns=s.replace(s2,s3);
+                document.getElementById('news').value=ns;
+            }
+            function conc(){
+                let a=(document.getElementById('string').value);
+               let b=(document.getElementById('string2').value);
+               let con = a.concat(b);
+                document.getElementById('res3').value=con;
+            }
+            function index()
+            {
+                var s=document.getElementById('news').value;
+                var i=document.getElementById('element').value;
+                ind=s.indexOf(i);
+                document.getElementById('indexx').value=ind;
+            }
+            function slice()
+            {
+                var s=document.getElementById('news').value;
+                var s2=document.getElementById('start').value;
+                var s3=document.getElementById('end').value;
+                sl=s.slice(s2,s3);
+                document.getElementById('sl').value=sl;
+            }
+            function len(){
+               let a=(document.getElementById('string').value);
+               let b=(document.getElementById('string2').value);
+               let length=a.length;
+                document.getElementById('demo').value=length;
+                let upper = a.toUpperCase();
+                document.getElementById('res').value=upper;
+                let lower = a.toLowerCase();
+                document.getElementById('res1').value=lower;
+                let first = a.charAt(0);
+                document.getElementById('res2').value=first;
+               let rv=a.split('').reverse().join('');
+                document.getElementById('rev').value=rv;
+            }
+        </script>
+        </head>
+        <body>
+            <h1 align="center">string functions</h1>
+            <table align="center">
+               
+            <tr>
+                <th>
+            <label>enter the string</label></th>
+            <td><input type="text" id="string"></td>
+            <td><input type="button" onclick="len()" value="submit"></td>
+            </tr>
+            <tr>
+                <th>
+                    <label>length</label></th>
+            <td><input type="text" id="demo"></td>
+            </tr>
+           <tr>
+            <th>
+                <label>uppercase</label></th>
+            <td><input tupe="text" id="res"></td>
+            </tr>
+            <tr>
+                <th>
+                    <label>lowercase</label></th>
+            <td><input type="text" id="res1"></td>
+            </tr>
+            <tr>            
+                <th>
+                    <label>first element</label></th>
+            <td><input type="text" id="res2"></td>
+            </tr>
+           <tr>
+            <th>
+                <label>reverse</label></th>
+            <td><input type="text" id="rev"></td>
+            </tr>
+            <tr>
+                <th>
+                    <label>enter the string to concat</label></th>
+           <td><input type="text" id="string2"></td>
+            <td><input type="button" onclick="conc()" value="ok" size="2"></td>
+            </tr>
+            <tr>
+                <th>
+                    <label>new stirng</label></th>
+            <td><input type="text" id="res3"></td>
+            </tr>
+            <tr>
+                <th>
+                    <label>string to be replaced</label></th>
+                <td><input type="text" id="old"></td>
+                </tr>
+                <tr>
+                    <th>
+                        <label>enter new string</label></th>
+                        <td><input type="text" id="new"></td>
+           <td><button onclick="replace()">ok</button></td>
+           </tr>
+           <tr>
+            <th>
+                <label>new string</label></th>
+               <td> <input type="text" id="news"></td>
+               </tr>
+               <tr>
+                   <th>
+           <label>Enter the element to get its index value</label></th>
+           <td><input type="text" id="element"></td>
+           <td><button onclick="index()">ok</button></td>
+           </tr>
+          <tr>
+              <td></td>
+          <td><input type="text" id='indexx'></td>
+          </tr>
+          <tr>
+              <th>
+          <label>Enter starting index to Slice</label></th>
+          <td><input type="text" id="start"></td>
+          </tr>
+          <tr>
+              <th>
+           <label>enter ending index to slice</label></th>
+           <td><input type="text" id="end"></td>
+           <td><button onclick="slice()">ok</button></td>
+           </tr>
+           <tr>
+               <td></td>
+           <td><input type="text" id='sl'></td>
+           </tr>
+            </table>
+        </body>
+        </html>
+
+        <html>
+    <head>
+        <title>math Functions</title>
+        <script>
+            function math(){
+                var s=document.getElementById('str').value;
+        
+                    pow=Math.round(s);
+                    document.getElementById("power").value=pow;
+                    cei=Math.ceil(s);
+                    document.getElementById("ceil").value=cei;
+                    flo=Math.floor(s);
+                    document.getElementById("floo").value=flo;
+                    tr=Math.trunc(s);
+                    document.getElementById("trunk").value=tr;
+                    si=Math.sign(s);
+                    document.getElementById("signn").value=si;
+                    root=Math.sqrt(s);
+                    document.getElementById("powe").value=root;
+                    abso=Math.abs(s);
+                    document.getElementById("abb").value=abso;               
+            }
+            function minmax(){
+                var s=document.getElementById('str').value;
+                var a=document.getElementById('str1').value;
+                var b=document.getElementById('str2').value;
+                maxi=Math.max(s,a,b);
+                document.getElementById('maxim').value=maxi;
+                mini=Math.min(s,a,b);
+                document.getElementById('minim').value=mini;
+                
+            }
+            </script>
+            <body>
+                <h1 align="center">Math Functions</h1>
+                <table align="center">
+                   <tr>
+                       <th>
+                           <label>enter a number</label>
+                       </th>
+                       <td>
+                           <input type="number" id="str">
+                       </td>
+                       <td>
+                           <button onclick="math()">submit</button>
+                       </td> 
+                   </tr>
+                   <tr>
+                    <th>
+                        <label>round</label>
+                    </th>
+                    <td>
+                        <input type="number" id="power">
+                    </td>
+                   </tr>
+                   <tr>
+                    <th>
+                        <label>ceil</label>
+                    </th>
+                    <td>
+                        <input type="number" id="ceil">
+                    </td>
+                   </tr>
+                   <tr>
+                    <th>
+                        <label>floor</label>
+                    </th>
+                    <td>
+                        <input type="number" id="floo">
+                    </td>
+                   </tr>
+                   <tr>
+                    <th>
+                        <label>trunc</label>
+                    </th>
+                    <td>
+                        <input type="number" id="trunk">
+                    </td>
+                   </tr>
+                   <tr>
+                    <th>
+                        <label>sign</label>
+                    </th>
+                    <td>
+                        <input type="number" id="signn">
+                    </td>
+                   </tr>
+                   <tr>
+                    <th>
+                        <label>square root</label>
+                    </th>
+                    <td>
+                        <input type="number" id="powe">
+                    </td>
+                   </tr>
+                   <tr>
+                    <th>
+                        <label>absolute</label>
+                    </th>
+                    <td>
+                        <input type="number" id="abb">
+                    </td>
+                   </tr>
+                   <tr>
+                    <th>
+                        <label>enter a number 1</label>
+                    </th>
+                    <td>
+                        <input type="number" id="str1">
+                    </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label>enter a number 2</label>
+                        </th>
+                        <td>
+                            <input type="number" id="str2">
+                        </td>
+                    <td>
+                        <button onclick="minmax()">submit</button>
+                    </td> 
+                </tr>
+                <tr>
+                    <th>
+                        <label>maximum</label>
+                    </th>
+                    <td>
+                        <input type="number" id="maxim">
+                    </td>
+                   </tr>
+                   <tr>
+                    <th>
+                        <label>minimum</label>
+                    </th>
+                    <td>
+                        <input type="number" id="minim">
+                    </td>
+                   </tr>
+
+                </table>
+            </body>
