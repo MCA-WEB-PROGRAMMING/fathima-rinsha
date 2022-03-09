@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>Entryform</title>
+<meta char set="utf-8">
+<body>
+<link rel="stylesheet" href="style.css">
+<script>
+  function check()
+   {
+      var name=document.myform.fname.value;
+      var email=document.myform.email.value;
+      var pass=document.myform.pass.value;
+      var mob=document.myform.mob.value;
+      var re=/[0-9!@#$%^&*]/
+      var ren=/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+  if(fname=="")
+   {
+    alert("enter a valid name");
+    document.myform.fname.focus();
+    console.log("name");
+    return false;
+   }
+    else if(email=="")
+    {
+      alert("enter a valid email");
+      document.myform.email.focus();
+    }
+  else if(mob.lenght!=10)
+  {
+  alert("enter a 10 digit mobile number") 
+  document.myform.mob.focus(); 
+  return false;
+   }
+   else if(pass==""){
+     alert("enter valid password")
+     document.myform.pass.focus(); 
+  return false;
+   }
+  }
+</script>
+</head>
+<body>
+ <form name="myform">
+    <table align="center">
+    <h1 align="center">Rgister Form</h1>
+  <div>
+   <tr> <td>
+      Enter your Name:
+      </td>
+    <td>
+      <input type="text"name="fname"id="fname">
+    </td>
+    </tr>
+  <tr>
+    <td>Age</td><td>
+        <input type="area"></td></tr>
+  <tr>
+    <td>Dob</td>
+    <td><input type="date"></td></tr>
+   <tr> 
+    <td>Address</td>
+    <td><input type="text area"name="address"></td></tr>
+   <tr>
+    <td>MOb No</td>
+    <td><input type="text" name="mob"></td>
+  </tr>
+  <tr>
+    <td>Email id</td>
+    <td><input type="email" name="email"id="email"></td>
+</tr>
+<tr>
+    <td>password</td>
+    <td><input type="password"name="pass" id="pass"></td>
+</tr>
+
+<tr><td><input type="reset" value="reset"></td>
+<td><input type="button" value="submit" onclick="check()"></tr>
+</table>
+</form>
+ </body>
+</html>
